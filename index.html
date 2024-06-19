@@ -12,19 +12,23 @@
             background-color: rgb(248, 247, 243);
             background-image: url('https://www.transparenttextures.com/patterns/wavecut.png');
             background-attachment: fixed;
+            position: relative;
         }
         header {
             background-color: rgb(209, 99, 39);
             color: white;
-            padding: 20px 0;
+            padding: 10px 0; /* 高度变小到原来的 1/3 */
             text-align: center;
+            height: 33.33vh; /* 高度为原来的 1/3 */
             background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
         }
         header h1 {
             font-size: 60px; /* 增大4-5倍 */
+            letter-spacing: 2px; /* 增大字距 */
         }
         header .highlight {
             font-size: 70px; /* 比其它字大2个字号 */
+            letter-spacing: 4px; /* 前后多空出一个字距 */
         }
         nav {
             margin: 20px 0;
@@ -32,52 +36,42 @@
             background-color: rgb(0, 0, 0);
             color: white;
             padding: 10px 0;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
         }
         nav a {
-            margin: 0 15px;
-            text-decoration: none;
             color: white;
-            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
-            max-width: 800px;
-            margin: 20px auto;
             padding: 20px;
+            margin: 10px;
             background-color: white;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-        h2 {
-            color: rgb(209, 99, 39);
-        }
-        .about-container {
-            display: flex;
-            align-items: center;
-        }
-        .about-container img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills li {
-            background-color: rgb(209, 99, 39);
-            color: white;
-            padding: 5px 10px;
-            margin: 5px 0;
-            display: inline-block;
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/skulls.png'); /* 卡通装饰图案 */
+            opacity: 0.1;
         }
         footer {
-            background-color: rgb(0, 0, 0);
-            color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            background-color: rgb(209, 99, 39);
+            color: white;
+            position: relative;
+            background-image: url('https://www.transparenttextures.com/patterns/food.png'); /* 卡通装饰图案 */
+            opacity: 0.8;
         }
         .video-container {
             display: flex;
@@ -85,70 +79,28 @@
             justify-content: space-between;
         }
         .video-container iframe {
-            width: 48%;
-            height: auto;
+            flex: 0 0 48%; /* 每行两个视频并列 */
             margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>让您<span class="highlight">30秒认识</span>一个人</h1>
+        <h1><span class="highlight">30秒认识</span>让您30秒认识一个人</h1>
     </header>
     <nav>
-        <a href="#about">我是谁</a>
-        <a href="#projects">项目展示</a>
-        <a href="#blog">成绩</a>
-        <a href="#contact">联系方式</a>
-        <a href="#works">作品链接</a>
+        <a href="#about">关于我</a>
+        <a href="#portfolio">作品链接</a>
+        <a href="#contact">联系我</a>
     </nav>
     <section id="about">
-        <h2>我是谁</h2>
-        <div class="about-container">
-            <img src="https://raw.githubusercontent.com/yazhe-zh/yazhe.github.io/main/WechatIMG461.jpg" alt="个人照片">
-            <p>亲爱的面试官您好，我是荆亚喆，今年27岁。曾就职于上海一条网络科技有限公司剪辑部5年、北京VeeR虚拟现实公司市场部门。毕业于江西财经大学视觉传达专业本科，今谋求一份PV后期制作的工作。</p>
-        </div>
-        <h2>技能列表</h2>
-        <div class="skills">
-            <ul>
-                <li>Finalcut</li>
-                <li>AE</li>
-                <li>PR</li>
-                <li>Maya</li>
-                <li>UE5</li>
-                <li>单反</li>
-            </ul>
-        </div>
+        <h2>关于我</h2>
+        <p>这里是关于我的内容。</p>
     </section>
-    <section id="projects">
-        <h2>项目展示</h2>
-        <p>以下是我此前一些代表性的项目展示</p>
-        <ul>
-            <li>2019～2024 ，“一条”栏目剪辑（明星访谈、艺术展览、建筑新浪潮）</li>
-            <li>2019（刚毕业），VeeR VR电影国内宣传物料制作</li>
-            <li>其他制作过：上海博物馆纽约时代广场宣传片；联通X电信5G合作宣传片；爱达·魔都邮轮合作片等。</li>
-        </ul>
-    </section>
-    <section id="blog">
-        <h2>一些成绩</h2>
-        <p>在与公司同事合作共赢下获得：</p>
-        <ul>
-            <li>“一条”时期，3天一条纪实短片，产出过微信平台10W+点赞千万播放的梁永安，胡泳；具备社会影响力的蔡磊、葛剑雄等片子。蔡磊获得“黄河杯公益广告”大奖，年度最佳短片，部门年度优秀剪辑都曾获得过。</li>
-            <li>“VeeR”时期，VR影片《Lucid》国内预告获得原制作团队Breaking Forth的肯定。</li>
-            <li>补充：“一条”制作内容还包括美食探店，菜品制作，地方菜等。</li>
-            <li>片子可以在下方链接处点击观看</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>联系方式</h2>
-        <p>希望引起您的关注：</p>
-        <p>Email: 420518240@qq.com</p>
-        <p>电话: 18434297300</p>
-    </section>
-    <section id="works">
+    <section id="portfolio">
         <h2>作品链接</h2>
         <div class="video-container">
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112640986713345&bvid=BV1pugNeBEd5&cid=500001587396383&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112640986713345&bvid=BV1pugNeBEd5&cid=500001587396383&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=1055552465&bvid=BV16n4y197xq&cid=1578134676&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=505073572&bvid=BV1fg41157oR&cid=395160963&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=261911852&bvid=BV1re41137nT&cid=870727942&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
