@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人网页</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,57 +15,39 @@
             background-image: url('https://www.transparenttextures.com/patterns/wavecut.png');
             background-attachment: fixed;
         }
+
         header {
-            background-color: rgb(209, 99, 39);
-            color: white;
+            background: rgba(255, 255, 255, 0.3);
+            color: rgb(34, 81, 151);
             padding: 20px 0;
             text-align: center;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+            backdrop-filter: blur(10px); /* 模拟玻璃效果 */
+            border-bottom: 2px solid rgba(34, 81, 151, 0.6); /* 边框增加商务感 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
         }
-        nav {
-            margin: 20px 0;
-            text-align: center;
-            background-color: rgb(0, 0, 0);
-            color: white;
-            padding: 10px 0;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        section {
+
+        .video-container {
             max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: rgb(209, 99, 39);
-        }
-        .about-container {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: 20px;
         }
-        .about-container img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
+
+        .video-container iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
         }
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
+
+        .video-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.2em;
+            color: rgb(34, 81, 151);
+            text-align: center;
+            margin-bottom: 10px;
         }
-        .skills li {
-            background-color: rgb(209, 99, 39);
-            color: white;
-            padding: 5px 10px;
-            margin: 5px 0;
-            display: inline-block;
-        }
+
         footer {
             background-color: rgb(0, 0, 0);
             color: white;
@@ -73,85 +57,29 @@
             width: 100%;
             bottom: 0;
         }
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .video-container iframe {
-            width: 48%;
-            height: auto;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>亚喆YaZhe的作品、技能</h1>
+        <h1>亚喆YaZhe的作品展示</h1>
     </header>
-    <nav>
-        <a href="#about">我是谁</a>
-        <a href="#projects">项目展示</a>
-        <a href="#blog">成绩</a>
-        <a href="#contact">联系方式</a>
-        <a href="#works">作品链接</a>
-    </nav>
-    <section id="about">
-        <h2>我是谁</h2>
-        <div class="about-container">
-            <img src="https://raw.githubusercontent.com/yazhe-zh/yazhe.github.io/main/WechatIMG461.jpg" alt="个人照片">
-            <p>亲爱的面试官您好，我是荆亚喆，今年27岁。曾就职于上海一条网络科技有限公司剪辑部5年、北京VeeR虚拟现实公司市场部门。毕业于江西财经大学视觉传达专业本科，今谋求一份PV后期制作的工作。</p>
-        </div>
-        <h2>技能列表</h2>
-        <div class="skills">
-            <ul>
-                <li>Finalcut</li>
-                <li>AE</li>
-                <li>PR</li>
-                <li>Maya</li>
-                <li>UE5</li>
-                <li>单反</li>
-            </ul>
-        </div>
-    </section>
-    <section id="projects">
-        <h2>项目展示</h2>
-        <p>以下是我此前一些代表性的项目展示</p>
-        <ul>
-            <li>2019～2024 ，“一条”栏目剪辑（明星访谈、艺术展览、建筑新浪潮）</li>
-            <li>2019（刚毕业），VeeR VR电影国内宣传物料制作</li>
-            <li>其他制作过：上海博物馆纽约时代广场宣传片；联通X电信5G合作宣传片；爱达·魔都邮轮合作片等。</li>
-        </ul>
-    </section>
-    <section id="blog">
-        <h2>一些成绩</h2>
-        <p>在与公司同事合作共赢下获得：</p>
-        <ul>
-            <li>“一条”时期，3天一条纪实短片，产出过微信平台10W+点赞千万播放的梁永安，胡泳；具备社会影响力的蔡磊、葛剑雄等片子。蔡磊获得“黄河杯公益广告”大奖，年度最佳短片，部门年度优秀剪辑都曾获得过。</li>
-            <li>“VeeR”时期，VR影片《Lucid》国内预告获得原制作团队Breaking Forth的肯定。</li>
-            <li>补充：“一条”制作内容还包括美食探店，菜品制作，地方菜等。</li>
-            <li>片子可以在下方链接处点击观看</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>联系方式</h2>
-        <p>希望引起您的关注：</p>
-        <p>Email: 420518240@qq.com</p>
-        <p>电话: 18434297300</p>
-    </section>
     <section id="works">
         <h2>作品链接</h2>
         <div class="video-container">
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112640986713345&bvid=BV1pugNeBEd5&cid=500001587396383&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=1055552465&bvid=BV16n4y197xq&cid=1578134676&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=505073572&bvid=BV1fg41157oR&cid=395160963&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=261911852&bvid=BV1re41137nT&cid=870727942&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=666268845&bvid=BV1ma4y117HG&cid=1406175525&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=830254055&bvid=BV1nu4y1D7xC&cid=1250862392&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=484800077&bvid=BV1ET411W7FK&cid=1090611719&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112641238370311&bvid=BV1q6gPetEmZ&cid=500001587470787&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112641238370012&bvid=BV1B6gPetE32&cid=500001587474405&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=237963832&bvid=BV1iM411X7TZ&cid=205816784&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            <!-- 新增视频及标题 -->
+            <div>
+                <div class="video-title">AI Generated Love - Exploring Game Creation</div>
+                <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=412533878&bvid=BV1Vo4nezEc8&cid=500665234&" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
+            <!-- 保留的视频及标题 -->
+            <div>
+                <div class="video-title">Artistic Exhibition of China</div>
+                <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112641238370311&bvid=BV1q6gPetEmZ&cid=500001587470787&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
+            <div>
+                <div class="video-title">New Age Architecture in Shanghai</div>
+                <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112641238370012&bvid=BV1B6gPetE32&cid=500001587474405&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
         </div>
     </section>
     <footer>
