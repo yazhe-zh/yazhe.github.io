@@ -11,60 +11,49 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, rgba(34, 81, 151, 0.8), rgba(179, 90, 41, 0.8)), url('https://www.transparenttextures.com/patterns/glass.png');
+            background: linear-gradient(135deg, rgba(34, 81, 151, 0.3), rgba(179, 90, 41, 0.3));
             background-size: cover;
             background-attachment: fixed;
         }
 
         header {
-            background: linear-gradient(to right, rgba(34, 81, 151, 0.8), rgba(179, 90, 41, 0.8)), url('https://www.transparenttextures.com/patterns/glass.png');
-            background-size: cover;
-            color: rgb(34, 81, 151);
-            padding: 40px 0; /* 增加页眉高度以适应更大的字体 */
+            background: rgba(0, 0, 0, 0.3);
+            color: #c4d6ff;
+            padding: 40px 0;
             text-align: center;
-            backdrop-filter: blur(10px); /* 模拟玻璃效果 */
-            border-bottom: 2px solid rgba(34, 81, 151, 0.6); /* 边框增加商务感 */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(34, 81, 151, 0.6);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-image: url('https://www.transparenttextures.com/patterns/glass.png');
+            background-size: cover;
+            background-blur: 10px;
         }
 
         header h1 {
-            font-size: 3em; /* 增加字体大小 */
+            font-size: 2.4em;
         }
 
         .video-container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 40px auto;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 40px;
         }
 
         .video-container iframe {
             width: 100%;
             height: auto;
             aspect-ratio: 16/9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 顶光效果 */
         }
 
         .video-title {
             font-family: 'Noto Serif SC', serif;
             font-size: 1.2em;
-            color: rgb(40, 90, 180); /* 提亮后的蓝色 */
+            color: #c4d6ff;
             text-align: center;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* 添加75%透明度阴影 */
-        }
-
-        #works h2 {
-            display: inline-block;
-            padding: 5px 15px; /* 缩小方框 */
-            background-color: red;
-            color: white;
-            border-radius: 15px; /* 圆角效果 */
-            font-size: 1.5em;
-            font-family: 'Noto Serif SC', serif;
-            margin: 0; /* 去除外边距 */
-            line-height: 1.2; /* 对齐文本 */
-            text-align: center;
         }
 
         footer {
@@ -75,6 +64,31 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        h2 {
+            position: relative;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+
+        h2::before {
+            content: '作品';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #a92424; /* 调整后的红色 */
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+            z-index: -1;
+        }
+
+        h2 {
+            color: #c4d6ff; /* 提亮后的蓝色 */
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
         }
     </style>
 </head>
@@ -93,19 +107,19 @@
             <!-- 保留的视频及标题 -->
             <div>
                 <div class="video-title">2024中国联通·5G宣传片</div>
-                <iframe src="https://player.bilibili.com/player.html?bvid=BV1q6gPetEmZ&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112641238370311&bvid=BV1q6gPetEmZ&cid=500001587470787&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             </div>
             <div>
                 <div class="video-title">VeeR·虚拟平台宣传片</div>
-                <iframe src="https://player.bilibili.com/player.html?bvid=BV1B6gPetE32&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=112641238370012&bvid=BV1B6gPetE32&cid=500001587474405&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             </div>
-            <div>
+             <div>
                 <div class="video-title">上博·15s纽约时代广场TVC</div>
-                <iframe src="https://player.bilibili.com/player.html?bvid=BV1us4neaEwm&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                <iframe src="https://www.bilibili.com/video/BV1us4neaEwm/?spm_id_from=333.999.0.0&vd_source=a000993e607d3143ccc5582475c888e6" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             </div>
-            <div>
+             <div>
                 <div class="video-title">supbro·鞋盒广告</div>
-                <iframe src="https://player.bilibili.com/player.html?bvid=BV1bs4nehEw8&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                <iframe src="https://www.bilibili.com/video/BV1bs4nehEw8/?spm_id_from=333.999.0.0&vd_source=a000993e607d3143ccc5582475c888e6" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             </div>
         </div>
     </section>
