@@ -46,6 +46,7 @@
             color: #c4d6ff;
             text-align: center;
             margin-bottom: 10px;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 1); /* 添加阴影 */
         }
 
         footer {
@@ -59,11 +60,9 @@
         }
 
         .title-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             position: relative;
             margin-bottom: 20px;
+            margin-left: 2em; /* 设置距离网页左侧两个字符的距离 */
         }
 
         .title-background {
@@ -72,10 +71,12 @@
             border-radius: 12px;
             position: absolute;
             z-index: -1;
-            transform: scale(0.75); /* 缩小1/3 */
-            left: 50%;
+            filter: blur(2.5px); /* 模糊背景 */
+            width: fit-content;
+            height: fit-content;
+            left: 0;
             top: 50%;
-            transform: translate(-50%, -50%) scale(0.75);
+            transform: translateY(-50%);
         }
 
         section h2 {
