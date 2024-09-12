@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: rgb(248, 247, 243);
-            background-image: url('https://www.transparenttextures.com/patterns/wavecut.png');
+            background: linear-gradient(to right, rgba(34, 81, 151, 0.8), rgba(179, 90, 41, 0.8)), url('https://www.transparenttextures.com/patterns/glass.png');
+            background-size: cover;
             background-attachment: fixed;
         }
 
@@ -20,11 +20,15 @@
             background: linear-gradient(to right, rgba(34, 81, 151, 0.8), rgba(179, 90, 41, 0.8)), url('https://www.transparenttextures.com/patterns/glass.png');
             background-size: cover;
             color: rgb(34, 81, 151);
-            padding: 20px 0;
+            padding: 40px 0; /* 增加页眉高度以适应更大的字体 */
             text-align: center;
             backdrop-filter: blur(10px); /* 模拟玻璃效果 */
             border-bottom: 2px solid rgba(34, 81, 151, 0.6); /* 边框增加商务感 */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+        }
+
+        header h1 {
+            font-size: 3em; /* 增加字体大小 */
         }
 
         .video-container {
@@ -47,6 +51,16 @@
             color: rgb(34, 81, 151);
             text-align: center;
             margin-bottom: 10px;
+        }
+
+        #works h2 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border-radius: 15px; /* 圆角效果 */
+            font-size: 1.5em;
+            font-family: 'Noto Serif SC', serif;
         }
 
         footer {
